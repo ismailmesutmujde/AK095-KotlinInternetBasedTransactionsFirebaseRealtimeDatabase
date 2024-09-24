@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val refPersons = database.getReference("persons")
 
         // firebase insert person
-        //val person = Persons("Sedat", 10)
+        //val person = Persons("Ayşe", 53)
         //refPersons.push().setValue(person)
 
         // firebase delete person
@@ -34,7 +34,13 @@ class MainActivity : AppCompatActivity() {
         refPersons.child("-O7ZKNmJHAisincZbAso").updateChildren(updateInfo)*/
 
         // firebase data reading
-        refPersons.addValueEventListener(object : ValueEventListener {
+
+        //val query = refPersons.orderByChild("person_name").equalTo("Ahmet")
+        //val query = refPersons.limitToFirst(2)
+        //val query = refPersons.limitToLast(2)
+        val query = refPersons.orderByChild("person_age").startAt(30.0).endAt(50.0)
+
+        query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 for (p in snapshot.children) {
                     val person = p.getValue(Persons::class.java)
