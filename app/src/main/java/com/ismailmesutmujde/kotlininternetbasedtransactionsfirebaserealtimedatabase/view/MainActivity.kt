@@ -20,7 +20,13 @@ class MainActivity : AppCompatActivity() {
         //refPersons.push().setValue(person)
 
         // firebase delete person
-        refPersons.child("-O7ZK_v3-IdSrxccWVIX").removeValue()
+        //refPersons.child("-O7ZK_v3-IdSrxccWVIX").removeValue()
+
+        // firebase update person
+        val updateInfo = HashMap<String,Any>()
+        updateInfo["person_name"] = "Gamze"
+        updateInfo["person_age"] = 29
+        refPersons.child("-O7ZKNmJHAisincZbAso").updateChildren(updateInfo)
 
     }
 }
