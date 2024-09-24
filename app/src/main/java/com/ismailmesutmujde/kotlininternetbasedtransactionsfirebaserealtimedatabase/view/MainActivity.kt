@@ -16,9 +16,11 @@ class MainActivity : AppCompatActivity() {
         val refPersons = database.getReference("persons")
 
         // firebase insert person
-        val person = Persons("Sedat", 10)
-        refPersons.push().setValue(person)
+        //val person = Persons("Sedat", 10)
+        //refPersons.push().setValue(person)
 
+        // firebase delete person
+        refPersons.child("-O7ZK_v3-IdSrxccWVIX").removeValue()
 
     }
 }
