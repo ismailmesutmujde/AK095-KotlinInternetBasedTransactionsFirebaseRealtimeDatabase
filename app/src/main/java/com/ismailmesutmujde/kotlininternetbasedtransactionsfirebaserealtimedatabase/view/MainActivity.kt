@@ -1,7 +1,8 @@
-package com.ismailmesutmujde.kotlininternetbasedtransactionsfirebaserealtimedatabase
+package com.ismailmesutmujde.kotlininternetbasedtransactionsfirebaserealtimedatabase.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ismailmesutmujde.kotlininternetbasedtransactionsfirebaserealtimedatabase.R
 
 
 class MainActivity : AppCompatActivity() {
