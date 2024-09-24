@@ -3,7 +3,7 @@ package com.ismailmesutmujde.kotlininternetbasedtransactionsfirebaserealtimedata
 import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
-data class Persons (var person_name:String? = "",
-                    var person_age: Int? = 0) {
+data class Persons(var person_name:String? = "",
+                   var person_age:Int? = 0) {
 
 }
